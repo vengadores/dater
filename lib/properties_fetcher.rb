@@ -42,7 +42,7 @@ class PropertiesFetcher
       url += "-pagina-#{number}"
     end
     url += ".html"
-    puts "url"
+    puts "#{url}"
     Nokogiri::HTML(
       open(url)
     )
