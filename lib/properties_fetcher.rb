@@ -12,7 +12,7 @@ class PropertiesFetcher
   end
 
   def fetch_properties!
-    (1..3).each do |page_number|
+    (1..10).each do |page_number|
       @current_page = fetch_page(page_number)
       relevant_properties.each do |property|
         Property.create(

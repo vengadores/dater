@@ -1,10 +1,24 @@
-<h2>Propiedades</h2>
+<h2>Búsqueda: plusvalia.com</h2>
 
-<ul>
-  <% @properties.each do |property| %>
-    <li>
-      <%= property.title %>
-      <%= image_tag property.image %>
-    </li>
-  <% end %>
-</ul>
+<table class="ui five column table">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Imagen</th>
+      <th>Precio</th>
+      <th>Ubicación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.title %></td>
+        <td style="height: 50px"><%= property.desc %></td>
+        <td><%= image_tag property.image %></td>
+        <td><%= property.price %></td>
+        <td>None</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
